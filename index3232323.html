@@ -12,89 +12,6 @@
 <style>
     @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-    .totheleft{
-        transform: translateX(600px);
-    }
-    .notifMessResizer{
-        height: 400px;
-    }
-    
-    button{
-        cursor: pointer;
-    }
-    input{
-        cursor: pointer;
-    }
-    .messClose{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-    .messClose > span{
-        padding: .4rem;
-        cursor: pointer;
-
-    }
-    .messClose > span:hover{
-        background: #dddcdc;
-    }
-    .MessDaw {
-        position: absolute;
-        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* Used rgba for transparency */
-        border-radius: 0.5rem;
-        overflow-y: auto;
-        display: none;
-    }
-    .MessDaw>div{
-        padding: 1rem;
-    }
-  
-    .MessDawHide{
-        width: 100%;
-        position: absolute;
-        background-color: #fff; /* Corrected capitalization */
-        height: 100%;
-        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* Used rgba for transparency */
-        border-radius: 0.5rem; 
-        overflow-y: auto;
-        display: block;
-    }
-    .notifClose{
-      display: flex;
-        justify-content: space-between;
-        align-items: center;  
-    }
-    .notifClose > span{
-         padding: .4rem;
-         cursor: pointer;
-    }
-    .notifClose > span:hover{
-        background: #dddcdc;
-    }
-    .notifDaw{
-        position: absolute;
-        box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-        border-radius: .5rem;
-        display: none;
-        overflow-y: auto;
-    }
-    .notifDaw>div{
-         padding: 1rem;
-    }
-    .notifDawHide{
-        width: 100%;
-        position: absolute;
-        background-color: #fff;
-        height: 100%;
-        box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-        border-radius: .5rem;
-        display: block;
-        overflow-y: block;
-    }
-    .n
-    .innerMain > *{
-        transition: .1s .1s ease-in-out;
-    }
     * {
         padding: 0%;
         margin: 0%;
@@ -308,20 +225,17 @@
         width: 100%;
         margin-bottom: .75rem ;
         gap: .50rem;
-        
 
     }
 
     .section-1>form {
-        width: 70%;
-        height: 100%;
+        width: 100%;
         padding: 1rem;
         display: flex;
         flex-direction: column;
         background-color: #fff;
         border-radius: 0.5rem;
         gap: 1rem;
-        justify-content: space-between;
     }
 
     .section-1>form .formDiv {
@@ -371,7 +285,7 @@
     .section-1>form>.formDiv>.fileSelect {
         padding: .70rem .70rem;
         display: flex;
-        justify-content: start;
+        justify-content: space-between;
         align-items: center;
         gap: 1rem;
         border: none;
@@ -383,22 +297,20 @@
     }
 
     .section-1>.notifMess {
-        width: 85%;
+        width: 40%;
         background-color: transparent;
         display: flex;
         flex-direction: column;
-        align-items: end;
-        position: relative;
-        
 
     }
 
     .section-1>.notifMess>div {
+        display: flex;
+        width: 100%;
         gap: 1.75rem;
         align-items: end;
         justify-content: end;
         padding: 1px .75rem;
-        
     }
 
     .section-1>.notifMess>div button {
@@ -406,7 +318,6 @@
         border: none;
         border-radius: .5rem;
         background-color: #dddcdc;
-        margin: 0px .74rem;
     }
 
     .section-1>.notifMess>div button:hover {
@@ -516,7 +427,6 @@
         height: 100%;
         width: 100%;
         overflow-y: auto;
-        padding: 1.50rem;
     }
     .tulongpara>h1 {
         font-size: 1.25rem;
@@ -539,7 +449,6 @@
         justify-self: start;
         align-self: self-start;
         border-radius: .5rem;
-        box-shadow: -9px 10px 17px -6px rgba(0,0,0,0.18);
     }
     .tulongimgs > img{
         object-fit: cover;
@@ -548,7 +457,7 @@
         width: 100%;
         height: 100%;
         flex-shrink: 0;
-        padding: .2rem;
+        padding: .5rem;
     }
 
     .tulongButton {
@@ -593,7 +502,6 @@
     /* mediaquery */
 
 @media screen and (max-width: 640px) {
-   
     .burgerButton {
         height: 100%;
         margin-right: 1rem;
@@ -669,37 +577,32 @@
         transition:  .2s .2s ease-in-out;
         
     }
-    .innerMain > .section-1 {
-         display: flex;
-         flex-direction: column-reverse;
+    .section-1 {
+        display: flex;
+        flex-direction: column-reverse;
         justify-content: start;
         width: 100%;
-        margin-bottom: .75rem ;
-        gap: .50rem;
-        
+
     }
      .section-1>.notifMess {
         width: 100%;
         background-color: transparent;
         display: flex;
         flex-direction: column;
-        align-items: end;
-        position: relative;
+
     }
-    /* .section-1>.notifMess>div {
+    .section-1>.notifMess>div {
         display: flex;
         width: 100%;
         gap: .75rem;
         align-items: end;
         justify-content: end;
         padding: 1px .75rem;
-        height: 100%;
-    } */
+    }
      .section-1>form .formDiv {
         display: flex;
         flex-direction: column;
         justify-content: space-evenly;
-        height: 100%;
     }
      .section-1>form>.formDiv button {
         padding: .70rem .70rem;
@@ -711,56 +614,6 @@
         border-radius: .5rem;
         background-color: transparent;
         transition: all;
-    }
-     .section-1>form{
-        width: 100%;
-     }
-     .MessDaw {
-       
-        position: absolute;
-       
-       
-       
-        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* Used rgba for transparency */
-        border-radius: 0.5rem;
-        overflow-y: auto;
-        display: none;
-    }
-    .MessDaw>div{
-        padding: 1rem;
-    }
-  
-    .MessDawHide{
-        width: 100%;
-        position: absolute;
-        background-color: #fff; /* Corrected capitalization */
-        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25); /* Used rgba for transparency */
-        border-radius: 0.5rem; 
-        overflow-y: auto;
-        display: block;
-        
-    }
-    
-    .notifDaw{
-        position: absolute;
-        box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-        border-radius: .5rem;
-        display: none;
-        overflow-y: auto;
-    }
-    .notifMessResizer{
-        height: 400px;
-    }
-    .notifDaw>div{
-         padding: 1rem;
-    }
-    .notifDawHide{
-        width: 100%;
-        background-color: #fff;
-        height: 100%;
-        box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
-        border-radius: .5rem;
-        display: block;
     }
      .calendar {
         padding: .75rem;
@@ -1066,7 +919,7 @@
                 </nav>
 
             </aside>
-            <div id="innerMain" class="innerMain">
+            <div class="innerMain">
                 <section class="section-1">
                     <form action="">
                         <input type="text" placeholder="Share some information kabarangay">
@@ -1114,9 +967,9 @@
                             </button>
                         </div>
                     </form>
-                    <div id="notifMess" class="notifMess">
+                    <div class="notifMess">
                         <div>
-                            <button id="notifDawBTN"><svg width="800px" height="800px" viewBox="0 0 24 24" fill="none"
+                            <button><svg width="800px" height="800px" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
 
                                     <g id="SVGRepo_bgCarrier" stroke-width="0" />
@@ -1131,8 +984,7 @@
                                     </g>
 
                                 </svg></button>
-                               
-                            <button id="MessDawBTN"><svg width="800px" height="800px" viewBox="0 0 24 24" fill="none"
+                            <button><svg width="800px" height="800px" viewBox="0 0 24 24" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
 
                                     <g id="SVGRepo_bgCarrier" stroke-width="0" />
@@ -1151,30 +1003,6 @@
                                     </g>
 
                                 </svg></button>
-                                
-                        </div>
-                        <div id="MessDaw" class="MessDaw">
-                            <div class="messClose">
-                                <h4>Notification</h4>
-                                <span id="closeMess">X</span>
-                            </div>
-                           
-                            <div>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis odit molestiae dignissimos et asperiores a
-                                excepturi ut dolores nesciunt necessitatibus laudantium perspiciatis similique, labore quidem quisquam! Dolores eum
-                                quia beatae.
-                            </div>
-                           
-                        </div>
-                        <div id="notifDaw" class="notifDaw">
-                            <div id="" class="notifClose">
-                                <h4>Messages</h4>
-                                <span id="notifClose">X</span>
-                            </div>
-                            <div>
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Veritatis odit molestiae dignissimos et asperiores a excepturi ut dolores nesciunt necessitatibus laudantium perspiciatis similique, labore quidem quisquam! Dolores eum quia beatae.
-                            </div>
-                            
                         </div>
                     </div>
                 </section>
@@ -3668,80 +3496,12 @@
         const offcanvas = document.getElementById('offcanvas');
         const aside = document.getElementById('aside');
         const bodymain = document.getElementById('bodymain')
-        const notifDawBTN = document.getElementById('notifDawBTN')
-        const MessDawBTN = document.getElementById('MessDawBTN')
-        const MessDaw = document.getElementById('MessDaw')
-        const notifDaw = document.getElementById('notifDaw')
-        const notifClose = document.getElementById('notifClose')
-        const closeMess = document.getElementById('closeMess')
-        const notifMess = document.getElementById('notifMess')
 
         offcanvas.addEventListener('click', ()=>{
             aside.classList.toggle('bodyHideMobile')
             bodymain.classList.toggle('bodymainHide')
             console.log(aside.classList)
         })
-
-        notifDawBTN.addEventListener('click',()=>{
-
-           if (notifDaw.classList.contains("notifDawHide")) {
-                MessDaw.classList.toggle('MessDawHide')
-                notifDaw.classList.toggle('notifDawHide')
-                
-            } else {
-                MessDaw.classList.toggle('MessDawHide')
-            }
-             notifMess.classList.toggle('notifMessResizer')
-           
-        })
-       
-        MessDawBTN.addEventListener('click',()=>{
-             
-            if(MessDaw.classList.contains("MessDawHide")){
-                MessDaw.classList.toggle('MessDawHide')
-                notifDaw.classList.toggle('notifDawHide')
-                
-            }else{
-                 notifDaw.classList.toggle('notifDawHide')
-                
-            }
-             notifMess.classList.toggle('notifMessResizer')
-        })
-
-         notifClose.addEventListener('click', () => {
-             
-             notifDaw.classList.toggle('notifDawHide')
-              notifMess.classList.toggle('notifMessResizer')
-        })
-        closeMess.addEventListener('click', () => {
-            MessDaw.classList.toggle('MessDawHide')
-             notifMess.classList.toggle('notifMessResizer')
-        })
-
-
-
-
-
-
-
     })
 </script>
-<!-- <script>
-    window.addEventListener('DOMContentLoaded', () => {
-        const innerMain = document.getElementById('innerMain');
-        const observer = new IntersectionObserver((entry)=>{
-            entry.forEach((item)=>{
-                item.target.classList.toggle('totheleft', !item.isIntersecting)
-            })
-        }, {
-            threshold: 0.5,
-            root: innerMain,
-            rootMargin: "200px"
-        })
-
-          Array.from(innerMain.children).forEach((item) => {
-           observer.observe(item)
-        })
-    })
-</script> -->
 </html>
